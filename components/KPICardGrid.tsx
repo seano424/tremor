@@ -1,12 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { Card, Grid, Text, Tab, TabList, Title } from '@tremor/react'
+import { Grid, Text, Tab, TabList, Title, Card } from '@tremor/react'
 
 import { kpiData } from '@/data'
 import KPICard from './KPICard'
 import ChartView from './ChartView'
 import TableView from './TableView'
+import BarChartView from './BarChartView'
 
 export default function KPICardGrid() {
   const [selectedView, setSelectedView] = useState('1')
@@ -38,7 +39,12 @@ export default function KPICardGrid() {
           </div>
         </>
       ) : (
-        <TableView />
+        <>
+          <TableView />
+          <div className='mt-6'>
+            <BarChartView />
+          </div>
+        </>
       )}
     </>
   )
