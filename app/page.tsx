@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={clsx('py-10', inter.className)}>
+    <main className={clsx('p-10', inter.className)}>
       <KPICardGrid />
     </main>
   )
