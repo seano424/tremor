@@ -8,6 +8,7 @@ import KPICard from './KPICard'
 import ChartView from './ChartView'
 import TableView from './TableView'
 import BarChartView from './BarChartView'
+import { animalData } from '@/data'
 
 export default function KPICardGrid() {
   const [selectedView, setSelectedView] = useState('1')
@@ -42,7 +43,7 @@ export default function KPICardGrid() {
         <>
           <TableView />
           <div className='mt-6'>
-            <BarChartView />
+            <BarChartView data={animalData} />
           </div>
         </>
       )}

@@ -1,43 +1,22 @@
 import { Card, Title, BarChart, Subtitle } from '@tremor/react'
 
-const chartdata = [
-  {
-    name: 'Amphibians',
-    'Number of threatened species': 2488,
-    'Estimated number of species in total': 10023,
-  },
-  {
-    name: 'Birds',
-    'Number of threatened species': 1445,
-    'Estimated number of species in total': 12223,
-  },
-  {
-    name: 'Crustaceans',
-    'Number of threatened species': 743,
-    'Estimated number of species in total': 13223,
-  },
-  {
-    name: 'Reptiles',
-    'Number of threatened species': 143,
-    'Estimated number of species in total': 14423,
-  },
-  {
-    name: 'Insects',
-    'Number of threatened species': 2743,
-    'Estimated number of species in total': 10623,
-  },
-]
+interface Props {
+  title?: string
+  subtitle?: string
+  data: any[]
+}
 
-const BarChartView = () => (
+const BarChartView = ({
+  title = 'Number of species threatened with extinction (2021)',
+  subtitle = 'The IUCN Red List has assessed only a small share of the total known species in the world.',
+  data,
+}: Props) => (
   <Card>
-    <Title>Number of species threatened with extinction (2021)</Title>
-    <Subtitle>
-      The IUCN Red List has assessed only a small share of the total known
-      species in the world.
-    </Subtitle>
+    <Title>{title}</Title>
+    <Subtitle>{subtitle}</Subtitle>
     <BarChart
       className='mt-6'
-      data={chartdata}
+      data={data}
       index='name'
       categories={[
         'Number of threatened species',

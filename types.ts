@@ -8,3 +8,5 @@ export type KPICardTypes = {
   delta?: string
   deltaType?: DeltaType
 }
+
+export type AnimalDataTypes = {}

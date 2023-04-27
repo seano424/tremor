@@ -1,4 +1,4 @@
-import { KPICardTypes } from './types'
+import { KPICardTypes, AnimalDataTypes } from './types'
 
 export const kpiData: KPICardTypes[] = [
   {
@@ -24,5 +24,33 @@ export const kpiData: KPICardTypes[] = [
     target: '2,000',
     delta: '10.1%',
     deltaType: 'moderateDecrease',
+  },
+]
+
+export const animalData: AnimalDataTypes[] = [
+  {
+    name: 'Amphibians',
+    'Number of threatened species': 2488,
+    'Estimated number of species in total': 10023,
+  },
+  {
+    name: 'Birds',
+    'Number of threatened species': 1445,
+    'Estimated number of species in total': 12223,
+  },
+  {
+    name: 'Crustaceans',
+    'Number of threatened species': 743,
+    'Estimated number of species in total': 13223,
+  },
+  {
+    name: 'Reptiles',
+    'Number of threatened species': 143,
+    'Estimated number of species in total': 14423,
+  },
+  {
+    name: 'Insects',
+    'Number of threatened species': 2743,
+    'Estimated number of species in total': 10623,
   },
 ]
