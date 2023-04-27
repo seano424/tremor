@@ -1,6 +1,10 @@
-export type ProgressCardTypes = {
+import { DeltaType } from '@tremor/react'
+
+export type KPICardTypes = {
   title?: string
-  metric?: number
-  progressPercentage?: number
-  flexText?: [string, string] | string
+  metric?: string
+  progress?: number
+  target?: string
+  delta?: string
+  deltaType?: DeltaType
 }
